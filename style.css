@@ -1,0 +1,35 @@
+#search-results-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+    color: black;
+}
+
+.reviewCardClass {
+    background-color: lightblue;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.formCardClass {
+    background-color: rgb(143, 228, 121);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-width: 300px;
+    text-align: center;
+}
+.resultsCard {
+    background-color: rgb(221, 228, 121);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-width: 300px;
+    text-align: center;
+}

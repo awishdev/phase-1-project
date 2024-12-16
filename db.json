@@ -1,0 +1,60 @@
+{
+  "reviews": [
+    {
+      "series": 20,
+      "rating": 7,
+      "comment": "Awesome!",
+      "author": "John Smith",
+      "id": "f03f"
+    },
+    {
+      "series": 20,
+      "rating": 10,
+      "comment": "A classic!",
+      "author": "Bob Doe",
+      "id": "c439"
+    },
+    {
+      "series": 20,
+      "id": "73a1",
+      "rating": "9",
+      "comment": "Underrated!",
+      "author": "Alan Turing"
+    },
+    {    
+      "id": "0ea9",
+      "rating": "9",
+      "comment": "The classic GOAT!",
+      "author": "Ada Lovelace",
+      "series": 21
+    },
+    {
+      "id": "4fd9",
+      "rating": "100",
+      "comment": "I like Demon Slayer!",
+      "author": "Lauren Ish(my daughter)",
+      "series": 38000
+    },
+    {
+      "id": "1c6f",
+      "rating": "99",
+      "comment": "I like to watch the big part where they fight the evil nurse!",
+      "author": "Lauren Ish(my daughter)",
+      "series": 6702
+    },
+    {
+      "id": "7174",
+      "rating": "10",
+      "comment": "The only anime I can re-watch endlessly.",
+      "author": "Arthur Ish",
+      "series": 1575
+    },
+    {
+      "id": "c257",
+      "rating": "1000",
+      "comment": "I like the cool laser swords.",
+      "author": "Lauren Ish (my daughter)",
+      "series": 93
+    }
+  ]
+}
