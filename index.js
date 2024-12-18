@@ -134,12 +134,33 @@ function renderReview(review){
     <p>Rating: ${review.rating}</p>
     <p>${review.comment}</p>
     <p>Author: ${review.author}</p>
+    <button type="button" id="delete${review.id}">Delete Review</button>
   `;
+  reviewCard.id = `${review.id}`;
   reviewCard.classList.add("reviewCardClass");
   document.getElementById("review-container-div").appendChild(reviewCard);
+
+  document.getElementById(`delete${review.id}`).addEventListener("click", () =>  handleDelete(review));
   }
 
 }
+
+
+//handle review deletion
+
+function handleDelete(review){
+
+  document.getElementById(`${review.id}`).remove();
+  fetch(`http://localhost:3000/reviews/${review.id}`,{
+    method:'DELETE',
+    headers: {
+      'Content-Type':'application/json'
+    }
+  })
+
+}
+
+
   //handle review form submit
 function reviewSubmit(reviewData, series){
   console.log(reviewData);
