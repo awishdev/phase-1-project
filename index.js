@@ -1,4 +1,7 @@
 
+//declare variables4
+
+
 let searchToggle = true;
 
 let resultsHolder = [];
@@ -21,6 +24,8 @@ function init(){
 
 document.addEventListener("DOMContentLoaded", init);
 
+//query API with user provided search and return anime list results then send to render func
+
 function handleSubmit(formInput){
 
     resultsHolder = [];
@@ -33,6 +38,8 @@ function handleSubmit(formInput){
     renderResults(seriesResult)}));
 
   }
+
+  //build HTML for the search results and add do DOM
 
   function renderResults(series){
     resultsObj = {};
@@ -61,6 +68,8 @@ function handleSubmit(formInput){
     document.getElementById("search-results-container").appendChild(card);
     document.getElementById(`select${series.mal_id}`).addEventListener("click", () =>  handleSelect(series));
   }
+
+//remove search results from DOM and display selection with review form
 
   function handleSelect(series){
 
@@ -117,6 +126,8 @@ function handleSubmit(formInput){
 
 
   }
+
+  // get reviews from JSON and send each to func for adding to DOM
 function getReviews(series){
 
   fetch(`http://localhost:3000/reviews`)
@@ -125,6 +136,8 @@ function getReviews(series){
     renderReview(review)}))
 
 }
+
+//build HTML for each review and add it to DOM
 
 function renderReview(review){
   console.log(review);
@@ -174,7 +187,7 @@ function reviewSubmit(reviewData, series){
   //renderReview(newReviewObj);
   postReview(newReviewObj)
 }
-
+//send review form data to JSON server then pass to func to add to DOM
 function postReview(review){
   console.log(review);
   fetch(`http://localhost:3000/reviews`,{
