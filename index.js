@@ -1,10 +1,8 @@
 
-//declare variables4
+//declare variables
 
 
 let searchToggle = true;
-
-let resultsHolder = [];
 
 let resultsObj = {};
 
@@ -27,8 +25,6 @@ document.addEventListener("DOMContentLoaded", init);
 //query API with user provided search and return anime list results then send to render func
 
 function handleSubmit(formInput){
-
-    resultsHolder = [];
 
     fetch(`https://api.jikan.moe/v4/anime?q=${formInput.search.value}&sfw`,{
     headers:
@@ -184,7 +180,6 @@ function reviewSubmit(reviewData, series){
   newReviewObj.author = reviewData.author.value;
   newReviewObj.series = series.mal_id;
   //add to dom
-  //renderReview(newReviewObj);
   postReview(newReviewObj)
 }
 //send review form data to JSON server then pass to func to add to DOM
@@ -202,4 +197,3 @@ function postReview(review){
   .then(response => response.json())
   .then(reviewData => renderReview(reviewData));
 }
-  //post review to json
