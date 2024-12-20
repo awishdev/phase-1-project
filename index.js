@@ -50,6 +50,7 @@ function handleSubmit(formInput){
 
     let card = document.createElement("div");
     card.className = "resultsCard";
+    card.id = `card${series.mal_id}`;
     card.innerHTML = `
       <div>
         <img id="${series.mal_id}" src="${series.images.jpg.image_url}" class="seriesImg" /> 
@@ -62,8 +63,13 @@ function handleSubmit(formInput){
         <button type="button" id="select${series.mal_id}">Select</button>
         </div>
     `;
+    card.addEventListener(`mouseover`, () => card.style.backgroundColor = `coral`);
+    card.addEventListener(`mouseout`, () => card.style.backgroundColor = `rgb(221, 228, 121)`);
+
     document.getElementById("search-results-container").appendChild(card);
     document.getElementById(`select${series.mal_id}`).addEventListener("click", () =>  handleSelect(series));
+
+
   }
 
 //remove search results from DOM and display selection with review form
