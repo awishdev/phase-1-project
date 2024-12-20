@@ -31,7 +31,8 @@ function handleSubmit(formInput){
     {'Content-Type':'application/json'},})
   .then(response => response.json())
   .then(resData => resData.data.forEach(seriesResult => {
-    renderResults(seriesResult)}));
+    renderResults(seriesResult)}))
+  .catch(error => console.error(`Error:`, error.message));
 
   }
 
@@ -130,6 +131,7 @@ function getReviews(series){
   .then(response => response.json())
   .then(data => data.forEach(review => {
     renderReview(review)}))
+  .catch(error => console.error(`Error:`, error.message))
 
 }
 
@@ -166,6 +168,7 @@ function handleDelete(review){
       'Content-Type':'application/json'
     }
   })
+  .catch(error => console.error(`Error:`, error.message));
 
 }
 
@@ -195,5 +198,6 @@ function postReview(review){
     body:JSON.stringify(review)
   })
   .then(response => response.json())
-  .then(reviewData => renderReview(reviewData));
+  .then(reviewData => renderReview(reviewData))
+  .catch(error => console.error(`Error:`, error.message));
 }
